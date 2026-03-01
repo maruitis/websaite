@@ -1,0 +1,253 @@
+body{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg,#fad4e8,#fce6ff,#faafd4);
+    position: relative;
+    opacity: 0;            
+    animation: fadeIn 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+h1{
+    color: rgb(176,108,153);
+    text-align: center;
+    font-size: 70px;
+    font-family: 'Bungee',sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    
+}
+h2{
+    color: rgb(124,63,104);
+    text-align: center;
+    font-size: 60px;
+    font-family:'Oswald',serif;
+    font-weight: 300;
+    font-style: oblique;
+        
+}
+h3{  color: rgb(124,63,104);
+    text-align: center;
+    font-size: 50px;
+    font-family:'Oswald',sans-serif;
+    font-weight: 200;
+    font-style: inherit;
+    
+}
+p{
+    font-family: 'Oswald',sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 40px;
+    line-height: 1.5;
+    color: rgb(68,24,54);
+    text-align: center;
+    line-height:1;
+}
+a{
+    color: lightsteelblue;
+    text-decoration:none;
+    text-align: center;
+}
+a:hover {
+    color:black;
+    text-align: center;
+}
+img{
+    max-width: 400px;
+    max-height: 400px;
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+img:hover {
+    transform: scale(1.05);
+}
+video{
+    width: 600px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+video:hover{
+    transform: scale(1.05)
+}
+nav {
+    margin: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+nav ul{
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    background-color: #687ea6;
+    padding: 10px;
+    justify-content: center;
+}
+
+nav ul li a {
+    margin: 0;
+    display: block;
+    padding: 10px 20px;
+    background-color: #89a4d6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: o.3s;
+   }
+
+nav ul li a:hover {
+    background-color: #8495b3;
+}
+button{
+    justify-content: center;
+    align-content: center;
+    color: rgb(168,212,255);
+    border-radius: 40px;
+    padding: 20px 40px;
+    cursor: pointer;
+    border: none;
+    align-content: center;
+    font-family: "Bungee",sans-serif;
+    font-size: 20px;
+    display: inline-block;
+}
+
+.button-wrapper{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    transition: transform 0.3s ease;
+}
+.image-row img{
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+} 
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 50vh;
+    padding: 40px;
+}
+.main-button{
+    display: inline-block;
+    font-family: "Bungee",sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(168,212,255);
+    background-color: white;
+    border-radius: 60px;
+    padding: 40px 60px;
+    transition: all 0.4s ease;
+    
+    
+        
+}
+.main-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    color: rgb(57,107,156);
+    
+}
+.main-button:active {
+    transform: scale(0.95);
+}
+section {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    background-color: #687ea6;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    margin: 5px 0;
+}
+.dropdown-menu {
+    border-radius: 10px;
+}
+
+.bg-grid { 
+position: fixed; 
+inset: 0; 
+z-index: -1; 
+pointer-events: none; 
+display: grid; 
+grid-template-columns: repeat(8, 1fr); 
+gap: 50px; 
+padding: 50px; 
+overflow: hidden;
+} 
+.bg-grid span { 
+font-size: 110px; 
+color: rgba(255,255,255,0.2); 
+text-align: center; 
+position: relative; 
+animation: floatUp 8s linear infinite;
+} 
+
+
+
+
+
+.bg-grid span:nth-child(even) {
+    transform: translateY(40px);
+}
+
+@keyframes floatUp {
+   0% { transform: translateY(0); }
+    100% { transform: translateY(-200%); }
+}
+html {
+    scroll-behavior: smooth;
+}
